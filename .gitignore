@@ -1,0 +1,11 @@
+__pycache__/
+
+screenshots/
+
+reports/
+
+*.xlsx
+
+*.png
+
+*.log
