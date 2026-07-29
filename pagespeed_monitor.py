@@ -43,15 +43,44 @@ driver.set_page_load_timeout(120)
 
 # ---------- URL LIST ----------
 urls = [
-    {"url": "https://www.seqrite.com/", "env": "Live"},
-    {"url": "https://www.quickhealfoundation.org/", "env": "Live"},
-    {"url": "https://www.guardianav.co.in/", "env": "Live"},
+    # Quick Heal India
     {"url": "https://www.quickheal.co.in/", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/home-users", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/home-users/quick-heal-total-security/", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/home-users/quick-heal-internet-security", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/home-users/quick-heal-antivirus-pro", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/download-free-antivirus", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/installer", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/quick-heal-product-renew", "env": "Live"},
+    {"url": "https://www.quickheal.co.in/multirenew", "env": "Live"},
+
+    # Quick Heal Global
     {"url": "https://www.quickheal.com/", "env": "Live"},
-    {"url": "https://us.quickheal.com/", "env": "Live"},
-    {"url": "https://www.quickhealacademy.com/", "env": "Live"},
     {"url": "https://www.quickheal.com/blogs/", "env": "Live"},
+    {"url": "https://www.quickheal.com/quick-heal-product-renew/", "env": "Live"},
+    
+
+    # Quick Heal US
+    {"url": "https://us.quickheal.com/", "env": "Live"},
+    {"url": "https://us.quickheal.com/quick-heal-product-renew/", "env": "Live"},
+
+    # Knowledge Centre
     {"url": "https://www.quickheal.co.in/knowledge-centre/", "env": "Live"},
+
+    # Seqrite
+    {"url": "https://www.seqrite.com/", "env": "Live"},
+    {"url": "https://www.seqrite.com/contact-sales-person/", "env": "Live"},
+    {"url": "https://www.seqrite.com/endpoint-protection-cloud/", "env": "Live"},
+
+    # Guardian
+    {"url": "https://www.guardianav.co.in/", "env": "Live"},
+    {"url": "https://www.guardianav.co.in/renew", "env": "Live"},
+
+    # Foundation
+    {"url": "https://www.quickhealfoundation.org/", "env": "Live"},
+
+    # Academy
+    {"url": "https://www.quickhealacademy.com/", "env": "Live"},
 ]
 
 # ---------- VARIABLES ----------
