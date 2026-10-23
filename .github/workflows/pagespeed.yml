@@ -9,19 +9,17 @@ on:
 
 jobs:
   pagespeed:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
-
-      - name: Install Google Chrome
-        uses: browser-actions/setup-chrome@v1
 
       - name: Install Python Packages
         run: |
@@ -29,16 +27,22 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run PageSpeed Script
+        env:
+          PSI_API_KEY: ${{ secrets.PSI_API_KEY }}
         run: python pagespeed_monitor.py
 
       - name: Upload Reports
-        uses: actions/upload-artifact@v4
+        if: always()
+        uses: actions/upload-artifact@v5
         with:
           name: pagespeed-report
           path: reports/
+          if-no-files-found: warn
 
       - name: Upload Screenshots
-        uses: actions/upload-artifact@v4
+        if: always()
+        uses: actions/upload-artifact@v5
         with:
           name: pagespeed-screenshots
           path: screenshots/
+          if-no-files-found: warn
